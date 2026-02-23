@@ -1,15 +1,15 @@
 :root {
-  --bg: #f5f5f7;
-  --bg-alt: #ffffff;
-  --card: #ffffff;
-  --accent: #2563eb;
-  --text: #111827;
-  --text-soft: #4b5563;
-  --border-subtle: #e5e7eb;
+  --bg: #050505;
+  --bg-alt: #050505;
+  --card: #111111;
+  --accent: #f5f5f5;
+  --text: #f9fafb;
+  --text-soft: #a3a3a3;
+  --border-subtle: rgba(255, 255, 255, 0.12);
   --radius-lg: 14px;
   --radius-xl: 18px;
-  --shadow-soft: 0 8px 20px rgba(15, 23, 42, 0.08);
-  --shadow-subtle: 0 4px 14px rgba(15, 23, 42, 0.06);
+  --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.85);
+  --shadow-subtle: 0 10px 30px rgba(0, 0, 0, 0.7);
 }
 
 *,
@@ -125,9 +125,7 @@ main {
 .hero {
   padding-top: 1.5rem;
   padding-bottom: 3rem;
-  background:
-    radial-gradient(circle at top left, #e0edff 0, transparent 52%),
-    radial-gradient(circle at bottom right, #ffe9f5 0, transparent 55%);
+  background: none;
 }
 
 .hero-grid {
@@ -181,7 +179,7 @@ main {
 
 .btn.primary {
   background-color: var(--accent);
-  color: #ffffff;
+  color: #050505;
   box-shadow: var(--shadow-soft);
 }
 
@@ -298,9 +296,9 @@ main {
   font-size: 0.7rem;
   padding: 0.32rem 0.7rem;
   border-radius: 999px;
-  background-color: #e5edff;
-  color: #1d4ed8;
-  border: 1px solid #bfdbfe;
+  background-color: rgba(255, 255, 255, 0.06);
+  color: #e5e5e5;
+  border: 1px solid rgba(255, 255, 255, 0.14);
 }
 
 .hero-card-title {
@@ -348,7 +346,7 @@ main {
 }
 
 .section-alt {
-  background-color: #eef2f7;
+  background: transparent;
 }
 
 .section-header {
@@ -430,10 +428,10 @@ main {
   font-size: 0.74rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  border: 1px solid #bfdbfe;
-  background-color: #eff6ff;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background-color: rgba(255, 255, 255, 0.05);
   margin-bottom: 0.6rem;
-  color: #1d4ed8;
+  color: #e5e5e5;
 }
 
 .project-card h3 {
@@ -516,7 +514,7 @@ main {
 
 .form-row input,
 .form-row textarea {
-  background-color: #ffffff;
+  background-color: #111111;
   border-radius: 10px;
   border: 1px solid var(--border-subtle);
   padding: 0.5rem 0.7rem;
@@ -532,8 +530,8 @@ main {
 .form-row input:focus,
 .form-row textarea:focus {
   border-color: var(--accent);
-  box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.4);
-  background-color: #ffffff;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.3);
+  background-color: #111111;
 }
 
 .form-note {
