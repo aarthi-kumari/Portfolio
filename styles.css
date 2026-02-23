@@ -18,6 +18,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -121,6 +125,9 @@ main {
 .hero {
   padding-top: 1.5rem;
   padding-bottom: 3rem;
+  background:
+    radial-gradient(circle at top left, #e0edff 0, transparent 52%),
+    radial-gradient(circle at bottom right, #ffe9f5 0, transparent 55%);
 }
 
 .hero-grid {
@@ -194,14 +201,14 @@ main {
 .skill-card,
 .project-card,
 .hero-card {
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
 }
 
 .skill-card:hover,
 .project-card:hover,
 .hero-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.12);
+  transform: translateY(-6px);
+  box-shadow: 0 18px 38px rgba(15, 23, 42, 0.16);
 }
 
 .reveal {
@@ -214,6 +221,26 @@ main {
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Card entrance animations for skills & projects */
+
+.skill-card.reveal.is-visible,
+.project-card.reveal.is-visible {
+  animation: cardIn 600ms cubic-bezier(0.16, 0.84, 0.44, 1) both;
+}
+
+@keyframes cardIn {
+  0% {
+    opacity: 0;
+    transform: translateY(18px) scale(0.97);
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.04);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    box-shadow: 0 18px 38px rgba(15, 23, 42, 0.12);
+  }
 }
 
 @keyframes dotPulse {
